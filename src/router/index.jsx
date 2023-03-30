@@ -6,7 +6,7 @@ const routerCongfig = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
-    errorElement: <div>There has been an error</div>,
+    errorElement: <h1>There has been an error</h1>,
   },
   {
     path: '/cocktails',
