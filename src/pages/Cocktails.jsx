@@ -1,7 +1,13 @@
 import React from 'react';
+import { CocktailsList } from '../components/CocktailsList';
 
 function Cocktails() {
-  return <div>pagina de cocktails</div>;
+  return (
+    <div>
+      <h2>Selecciona un cocktail</h2>
+      <CocktailsList />
+    </div>
+  );
 }
 
 export default Cocktails;
