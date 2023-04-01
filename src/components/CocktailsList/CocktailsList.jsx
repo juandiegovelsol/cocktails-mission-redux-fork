@@ -17,15 +17,15 @@ function CocktailsList() {
 
   return (
     <div>
-      <h2>lista de cocktails</h2>
+      <h3>Selecciona un cocktail</h3>
       {isOpen && <Modal />}
       <div onClick={handleClick}>
         {cocktailItems.map((item) => (
           <CocktailCard
-            key={item.id}
-            imgUrl={item.imgUrl}
-            name={item.name}
-            instruction={item.instruction}
+            key={item.idDrink}
+            imgUrl={item.strDrinkThumb}
+            name={item.strDrink}
+            instruction={item.strInstructions}
           />
         ))}
       </div>
