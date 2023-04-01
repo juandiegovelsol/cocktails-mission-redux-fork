@@ -3,7 +3,7 @@ import './cocktail-card.scss';
 function CocktailCard({ imgUrl, name, instruction }) {
   return (
     <div className="cocktail-card">
-      <img src={imgUrl} alt={name} />
+      <img src={imgUrl} alt={name} className="cocktail-image" />
       <h3>{name}</h3>
       <p>{instruction}</p>
     </div>

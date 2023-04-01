@@ -1,4 +1,5 @@
 import React from 'react';
+
 import GoToBtn from '../components/GoToBtn/GoToBtn';
 
 function home() {
