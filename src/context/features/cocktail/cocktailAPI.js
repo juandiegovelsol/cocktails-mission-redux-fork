@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 const getOneCocktail = async (url) => {
   try {
+    const isOpen = false;
     const request = await fetch(url);
     const data = await request.json();
-    return data.drinks[0];
+    const drinks = await data.drinks[0];
+    return drinks;
   } catch (error) {
     return error;
   }
