@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { CocktailsList } from '../components/CocktailsList';
 import { getCocktailsAsync } from '../context/features/cocktail/cocktailSlice';
+import './cocktails.scss';
 
 function Cocktails() {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ function Cocktails() {
   }, []);
 
   return (
-    <div>
+    <div className="cocktails">
       <h2>{isLoading ? 'Cargando...' : 'Lista de cocktails'}</h2>
       {!isLoading && <CocktailsList />}
     </div>
