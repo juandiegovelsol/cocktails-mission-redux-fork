@@ -2,7 +2,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  isOpen: true,
+  isOpen: false,
+  currentCocktail: {},
 };
 
 const modalSlice = createSlice({
@@ -15,7 +16,10 @@ const modalSlice = createSlice({
     closeModal: (state) => {
       state.isOpen = false;
     },
+    sendCocktail: (state, action) => {
+      state.currentCocktail = action.payload;
+    },
   },
 });
-export const { openModal, closeModal } = modalSlice.actions;
+export const { openModal, closeModal, sendCocktail } = modalSlice.actions;
 export default modalSlice.reducer;

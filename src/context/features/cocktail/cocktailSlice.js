@@ -24,7 +24,7 @@ export const getCocktailsAsync = createAsyncThunk(
 const cocktailSlice = createSlice({
   name: 'cart',
   initialState,
-  // falta definir los reducer para este slice
+  // este slice no necesita reducers por ahora
   extraReducers: (builder) => {
     builder
       .addCase(getCocktailsAsync.pending, (state) => {
@@ -32,7 +32,6 @@ const cocktailSlice = createSlice({
       })
       .addCase(getCocktailsAsync.fulfilled, (state, action) => {
         const cocktailObj = action.payload;
-        // console.log('DATA FROM API', cocktailObj);
         state.isLoading = false;
         state.cocktailItems = cocktailObj;
       });
