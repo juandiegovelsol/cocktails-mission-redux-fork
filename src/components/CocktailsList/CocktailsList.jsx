@@ -22,9 +22,9 @@ function CocktailsList() {
   }; */
   return (
     <div className="cocktails-list">
-      <h3>Selecciona un cocktail</h3>
+      <h3>Select one cocktail</h3>
       {isOpen && <Modal />}
-      <div>
+      <div className="cocktails-list__list">
         {cocktailItems.map((item) => (
           <CocktailCard
             key={item.idDrink}

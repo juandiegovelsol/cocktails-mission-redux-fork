@@ -14,7 +14,7 @@ function Cocktails() {
 
   return (
     <div className="cocktails">
-      <h2>{isLoading ? 'Cargando...' : 'Lista de cocktails'}</h2>
+      <h2>{isLoading ? 'Loading...' : 'Cocktails list'}</h2>
       {!isLoading && <CocktailsList />}
     </div>
   );

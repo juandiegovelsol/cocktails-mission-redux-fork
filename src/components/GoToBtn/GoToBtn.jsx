@@ -6,7 +6,7 @@ function GoToBtn() {
 
   return (
     <button type="button" onClick={() => navigate('/cocktails')}>
-      Ir a cocktails
+      Go to cocktails
     </button>
   );
 }

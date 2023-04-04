@@ -5,7 +5,7 @@ import GoToBtn from '../components/GoToBtn/GoToBtn';
 function home() {
   return (
     <div>
-      <h2>Mira la página de cocktails</h2>
+      <h2>Go to the cocktails page</h2>
       <GoToBtn />
     </div>
   );
