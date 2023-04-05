@@ -36,19 +36,23 @@ function Modal() {
             X
           </button>
         </span>
-        <span className="top">
-          <img src={url} alt={name} className="modal-image" />
-        </span>
-        <h2>Ingredients</h2>
-        <ul>
-          {cocktailIngredients.map((item, index) => (
-            <li key={nanoid()}>
-              {`${item}${
-                ingredientsQty[index] ? `: ${ingredientsQty[index]}` : ''
-              }`}
-            </li>
-          ))}
-        </ul>
+        <div className="top-section">
+          <div className="image-container">
+            <img src={url} alt={name} className="modal-image" />
+          </div>
+          <div className="ingredients-container">
+            <h2>Ingredients</h2>
+            <ul>
+              {cocktailIngredients.map((item, index) => (
+                <li key={nanoid()}>
+                  {`${item}${
+                    ingredientsQty[index] ? `: ${ingredientsQty[index]}` : ''
+                  }`}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
         <h2>Instructions</h2>
         <p className="instructions">{instructions}</p>
       </div>
