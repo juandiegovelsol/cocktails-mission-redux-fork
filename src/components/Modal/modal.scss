@@ -27,19 +27,42 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    .top {
-      align-self: flex-end;
-      padding-top: 3%;
-      padding-right: 3%;
-      .close-button {
-        position: relative;
-        top: -10%;
-        left: -10%;
+
+    .close-button {
+      height: auto;
+      width: 95%;
+      display: flex;
+      justify-content: flex-end;
+      button {
+        margin-top: 10px;
+        height: 20px;
+        width: 20px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    ul {
+      li {
+        text-align: left;
+      }
+    }
+    .instructions {
+      margin-bottom: 5%;
+      padding: 0px 10%;
+    }
+  }
+  .top-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    .image-container {
+      max-width: 30%;
+      .modal-image {
+        width: 100%;
+        border-radius: 0.5rem;
       }
     }
   }
-}
-
-.modal-image {
-  max-width: 50%;
 }

@@ -14,7 +14,6 @@ function Modal() {
     strDrink: name,
     strInstructions: instructions,
   } = currentCocktail;
-
   // cocktailSection() is a helper function that returbn an array
   // the array is a portion of the currentCocktail values matching important keys
   // the second parameter is the string to match in the object keys.
@@ -28,7 +27,7 @@ function Modal() {
   return (
     <aside className="modal">
       <div className="modal__details">
-        <span className="top">
+        <span className="close-button">
           <button
             className="close-button"
             type="button"
@@ -36,19 +35,26 @@ function Modal() {
           >
             X
           </button>
-          <img src={url} alt={name} className="modal-image" />
         </span>
-        <h2>Ingredients</h2>
-        <span>
-          {cocktailIngredients.map((item) => (
-            <p key={nanoid()}>{item}</p>
-          ))}
-          {ingredientsQty.map((item) => (
-            <p key={nanoid()}>{item}</p>
-          ))}
-        </span>
+        <div className="top-section">
+          <div className="image-container">
+            <img src={url} alt={name} className="modal-image" />
+          </div>
+          <div className="ingredients-container">
+            <h2>Ingredients</h2>
+            <ul>
+              {cocktailIngredients.map((item, index) => (
+                <li key={nanoid()}>
+                  {`${item}${
+                    ingredientsQty[index] ? `: ${ingredientsQty[index]}` : ''
+                  }`}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
         <h2>Instructions</h2>
-        <p>{instructions}</p>
+        <p className="instructions">{instructions}</p>
       </div>
     </aside>
   );

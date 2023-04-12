@@ -13,7 +13,7 @@ const getOneCocktail = async (url) => {
 
 export const fetchCocktails = async () => {
   const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
-  const numCocktail = 4;
+  const numCocktail = 6;
   const allCocktails = [];
   try {
     // eslint-disable-next-line no-plusplus

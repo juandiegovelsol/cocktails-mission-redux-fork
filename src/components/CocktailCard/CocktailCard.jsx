@@ -26,16 +26,9 @@ function CocktailCard({ id: myId, imgUrl, name }) {
     dispatch(openModal());
   };
   return (
-    <div className="cocktail-card">
-      <img
-        src={imgUrl}
-        alt={name}
-        className="cocktail-image"
-        onClick={() => handleClick(myId)}
-      />
-      <h3 onClick={() => handleClick(myId)} className="cocktail-title">
-        {name}
-      </h3>
+    <div className="cocktail-card" onClick={() => handleClick(myId)}>
+      <img src={imgUrl} alt={name} className="cocktail-card__image" />
+      <h3 className="cocktail-card__title">{name}</h3>
     </div>
   );
 }

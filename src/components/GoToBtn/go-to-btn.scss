@@ -1,4 +1,75 @@
-//just an example, delete it when style is done
-button {
-  color: orangered;
+.goTo {
+  padding: 1em;
+  border-radius: 0.5rem;
+  position: relative;
+  background: white;
+  margin-top: 1.5em;
+
+  &__icons {
+    // font-size: 5em;
+    // border: 1px solid black;
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+  }
+
+  &__btn {
+    margin-top: 3em;
+    font-family: inherit;
+    padding: 0.8em 1em;
+    font-weight: bold;
+    background-color: salmon;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+
+  &__btn:hover {
+    opacity: 0.7;
+  }
+}
+
+//animated glow: source> https://youtu.be/-VOUK-xFAyk
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+:root {
+  --clr-1: #ffb9b9;
+  --clr-2: orange;
+  --clr-3: white;
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.goTo::before,
+.goTo::after {
+  content: "";
+  position: absolute;
+  inset: -0.2rem;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-2),
+    var(--clr-1)
+  );
+  animation: rotation 12s linear infinite;
+}
+
+.goTo::after {
+  filter: blur(0.8rem);
 }
