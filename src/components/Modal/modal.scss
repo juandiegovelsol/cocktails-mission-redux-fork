@@ -27,13 +27,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    .top {
-      align-self: center;
-      padding-top: 3%;
-      .modal-image {
-        max-width: 50%;
-      }
-    }
+
     .close-button {
       height: auto;
       width: 95%;
@@ -56,6 +50,19 @@
     .instructions {
       margin-bottom: 5%;
       padding: 0px 10%;
+    }
+  }
+  .top-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    .image-container {
+      max-width: 30%;
+      .modal-image {
+        width: 100%;
+        border-radius: 0.5rem;
+      }
     }
   }
 }
