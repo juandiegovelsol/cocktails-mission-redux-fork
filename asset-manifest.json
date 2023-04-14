@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cocktails-mission-redux/static/css/main.5a1424fe.css",
-    "main.js": "/cocktails-mission-redux/static/js/main.2a712d16.js",
+    "main.js": "/cocktails-mission-redux/static/js/main.f24d54a2.js",
     "index.html": "/cocktails-mission-redux/index.html",
     "main.5a1424fe.css.map": "/cocktails-mission-redux/static/css/main.5a1424fe.css.map",
-    "main.2a712d16.js.map": "/cocktails-mission-redux/static/js/main.2a712d16.js.map"
+    "main.f24d54a2.js.map": "/cocktails-mission-redux/static/js/main.f24d54a2.js.map"
   },
   "entrypoints": [
     "static/css/main.5a1424fe.css",
-    "static/js/main.2a712d16.js"
+    "static/js/main.f24d54a2.js"
   ]
 }
