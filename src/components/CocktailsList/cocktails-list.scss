@@ -1,0 +1,13 @@
+//just an example, delete it when style is done
+
+.cocktails-list {
+  height: 100%;
+  width: 100%;
+  color: salmon;
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

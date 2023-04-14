@@ -1,7 +1,19 @@
 import React from 'react';
 
+import GoToBtn from '../components/GoToBtn/GoToBtn';
+
 function home() {
-  return <div>ir a cocktails</div>;
+  const style = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  };
+  return (
+    <div style={style}>
+      <h2>Explore Cool Cocktails</h2>
+      <GoToBtn />
+    </div>
+  );
 }
 
 export default home;
